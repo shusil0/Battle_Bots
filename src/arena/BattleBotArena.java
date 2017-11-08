@@ -230,11 +230,11 @@ public class BattleBotArena extends JPanel implements MouseListener, MouseWheelL
 	/**
 	 * Right edge of the screen
 	 */
-	public static final int RIGHT_EDGE = 1260; //ROWBOTTOM - changed from 700// also arena panel width
+	public static final int RIGHT_EDGE = 800; // Shusil //ROWBOTTOM - changed from 700// also arena panel width
 	/**
 	 * Bottom edge of the screen
 	 */
-	public static final int BOTTOM_EDGE = 896; //ROWBOTTOM - changed from 500// arena panel height is this constant + TEXT_BUFFER
+	public static final int BOTTOM_EDGE = 600; // Shusil //ROWBOTTOM - changed from 500// arena panel height is this constant + TEXT_BUFFER
 	/**
 	 * Left edge of the screen
 	 */
@@ -297,15 +297,15 @@ public class BattleBotArena extends JPanel implements MouseListener, MouseWheelL
 	/**
 	 * Number of bullets on screen at once for each bot
 	 */
-	public static final int 	NUM_BULLETS = 4;
+	public static final int 	NUM_BULLETS = 0; // Shusil made zero for start
 	/**
 	 * Bot speed in pixels/frame
 	 */
-	public static final double 	BOT_SPEED = 3;//ROWBOTTOM changed from 2.5 to fix game balance and bots getting hung up on tombstones
+	public static final double 	BOT_SPEED = 2; //Shusil changed back to 2 //ROWBOTTOM changed from 2.5 to fix game balance and bots getting hung up on tombstones
 	/**
 	 * Bullet speed in pixels/frame
 	 */
-	public static final double 	BULLET_SPEED = 6;
+	public static final double 	BULLET_SPEED = 5; // Shusil changed to 5
 	/**
 	 * Maximum message length
 	 */
@@ -605,6 +605,7 @@ public class BattleBotArena extends JPanel implements MouseListener, MouseWheelL
 		//bots[7] = new SmartBot();  // Rowbottom
 		//bots[8] = new DumbBot();//Rowbottom2
 	
+		bots[7] = new Sucl_bot();			// Shusil's bot
 		
 
 		//bots[15] = new RandBot();  
@@ -618,7 +619,7 @@ public class BattleBotArena extends JPanel implements MouseListener, MouseWheelL
 		{
 			if (bots[i] == null)
 			{
-				//bots[i] = new DumbBot();
+				//bots[i] = new Sucl_bot();
 				//if (c%i==1)
 					bots[i] = new Drone();
 			//	else {// if (c==2)
